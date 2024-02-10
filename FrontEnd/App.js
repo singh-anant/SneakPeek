@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
+import ProductCard from "./src/components/ProductCard";
+import HomePage from "./src/pages/HomePage";
 
 const App = () => {
   return (
-    <div>
+    <div className="app-container">
       <Header/>
+      <HomePage/>
     </div>
   )
 }

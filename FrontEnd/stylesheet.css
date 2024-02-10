@@ -6,6 +6,10 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+.app-container{
+    margin: 2rem;
+}
 /* Basic WebApp CSS Ends Here */
 
 
@@ -16,7 +20,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin-top: 1em;
+   
 }
 .nav-items-container{
     width: 100%;
@@ -28,7 +32,6 @@
 
 .logo-container img{
     width: 8em;
-    margin-left: 2em;
     /* background-color: aqua; */
 }
 
@@ -42,6 +45,50 @@
 .nav-items-container ul li{
     display: inline-block;
     margin: 1em 2em;
+    font-size: large;
 }
 
 /* Header CSS Ends Here */
+
+
+/* ProductCard CSS Start Here */
+.product-card .product-card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(27rem,0fr));
+    gap: 2rem;
+}
+
+.product-card .product-card-container .product {
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    outline: .1rem solid #ccc;
+    outline-offset: -1.3rem;
+    cursor: pointer;
+}
+
+.product-card .product-card-container .product:hover{
+    outline:0.2rem solid #000;
+    outline-offset:0;
+}
+
+.product-card .product-card-container .product img{
+    height: 15rem;
+
+}
+
+.product-card .product-card-container .product:hover img {
+    transform: scale(.9);
+}
+
+.product-card .product-card-container .product h3{
+    padding: 0.5rem 0;
+    font-size: 1.8rem;
+}
+.product-card .product-card-container .product h3:hover{
+    color:#5cbdb9
+}
+.product-card .product-card-container .product h3 .brand{
+    font-size: 1rem;
+}
+
+/* ProductCard CSS End Here */
