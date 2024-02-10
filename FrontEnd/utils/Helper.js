@@ -1,0 +1,1 @@
+export const SHOES_API='https://raw.githubusercontent.com/Stupidism/goat-sneakers/master/api.json';

@@ -14,6 +14,7 @@
 
 
 
+
 /* Header CSS Start Here */
 .header{
    /* background-color: red; */
@@ -45,18 +46,24 @@
 .nav-items-container ul li{
     display: inline-block;
     margin: 1em 2em;
-    font-size: large;
+    font-size: larger;
 }
 
 /* Header CSS Ends Here */
 
 
-/* ProductCard CSS Start Here */
-.product-card .product-card-container{
-    display: grid;
+/* HomePage CSS Start Here */
+    
+    .homepage{
+        display: grid;
     grid-template-columns: repeat(auto-fit,minmax(27rem,0fr));
     gap: 2rem;
-}
+    }
+/* HomePage CSS End Here */
+
+
+/* ProductCard CSS Start Here */
+
 
 .product-card .product-card-container .product {
     text-align: center;
@@ -64,6 +71,7 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    outline: .1rem solid #ccc;
     outline-offset: -1.3rem;
     cursor: pointer;
+    transition: 0.8s ease-in-out;
 }
 
 .product-card .product-card-container .product:hover{
@@ -73,7 +81,7 @@
 
 .product-card .product-card-container .product img{
     height: 15rem;
-
+    transition: 0.8s ease-in-out;
 }
 
 .product-card .product-card-container .product:hover img {
@@ -82,7 +90,7 @@
 
 .product-card .product-card-container .product h3{
     padding: 0.5rem 0;
-    font-size: 1.8rem;
+    font-size: 1.1rem;
 }
 .product-card .product-card-container .product h3:hover{
     color:#5cbdb9
