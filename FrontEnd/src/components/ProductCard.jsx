@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ProductCard = ({productName,brand,image}) => {
+const ProductCard = ({productName,brand,image,sneakerObj,setIsPreviewOpen,setPreviewData}) => {
   return (
-    <div className='product-card'>
+    <div className='product-card' >
         <div className="product-card-container">
           <div className="product">
           <img src={image} alt="" />

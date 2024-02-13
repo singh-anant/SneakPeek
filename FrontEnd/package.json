@@ -15,7 +15,10 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "html-to-text": "^9.0.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "react-shimmer-effects": "^1.0.3"
   }
 }
