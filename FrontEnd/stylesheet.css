@@ -521,3 +521,37 @@ tr td a {
 
 /* Contact Page CSS Ends Here */
 
+/* Error Page CSS Start Here */
+.error-page {
+  text-align: center;
+  height: 100vh;
+  width: auto;
+}
+.error-page img {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  width: 50em;
+}
+.error-page .error-data {
+  padding: 1em 0;
+}
+
+.error-page .error-back-home {
+  padding: 2em;
+}
+.error-page .error-back-home a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #5cbdb9;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.error-page .error-back-home a:hover {
+  background-color: #ebf6f5;
+  color: #202327;
+}
+
+/* Error Page CSS End Here */
+
+

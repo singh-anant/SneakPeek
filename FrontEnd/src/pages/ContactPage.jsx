@@ -55,7 +55,7 @@ const ContactPage = () => {
             <td><MdEmail/></td>
             <td>
               <a target="_blank" href="mailto:anantsingh3366@gmail.com"
-                >anantsingh3346@gamil.com</a
+                >anantsingh3346@gmail.com</a
               >
             </td>
           </tr>

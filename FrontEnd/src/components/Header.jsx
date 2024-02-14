@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from "../../assets/logo.png"
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -9,10 +10,10 @@ const Header = () => {
       </div>
       <div className="nav-items-container">
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Cart</li>
+            <li><Link style={{textDecoration:'none',color:'black'}} to='/'>Home</Link></li>
+            <li><Link style={{textDecoration:'none',color:'black'}} to='/about'>About</Link></li>
+            <li><Link style={{textDecoration:'none',color:'black'}} to='/contact'>Contact</Link></li>
+            <li><Link style={{textDecoration:'none',color:'black'}} to='/cart'>Cart</Link></li>
         </ul>
       </div>
     </div>
