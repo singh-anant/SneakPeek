@@ -308,3 +308,121 @@ position: relative;
 
 /* ProductPreview CSS End Here  */
 
+/* About Section CSS Start Here */
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-left {
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.about-left-content > div {
+  background: #5cbdb9;
+  padding: 4rem 4rem 2.5rem 5rem;
+  text-align: center;
+}
+.about-left-content {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  transition: all ease-in-out 0.9s;
+}
+
+.about-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+.about-img img {
+  display: block;
+  width: 200px;
+  overflow: hidden;
+}
+.shadow {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.shadow::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  height: 7px;
+  width: 50px;
+  filter: blur(3px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+.shadow:hover .about-img {
+  transform: translateY(-10px);
+}
+.shadow:hover::after {
+  opacity: 1;
+}
+
+.about-left-content h2 {
+  font-size: 2rem;
+  color: #1e2328;
+  margin: 2.2rem 0 0.6rem 0;
+  line-height: 1.2;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #1e2328;
+}
+.about-left-content h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-top: 1.2rem;
+  color: #1e2328;
+}
+
+.icons {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0;
+}
+li {
+  list-style: none;
+}
+.icons li a {
+  background: #1e2328;
+  text-decoration: none;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+
+.icons li a:hover {
+  background: #edffec;
+  color: #5cbdb9;
+}
+
+/* About Section CSS End Here */
+
+
