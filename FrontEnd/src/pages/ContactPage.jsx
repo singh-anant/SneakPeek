@@ -16,11 +16,11 @@ const ContactPage = () => {
           <div className="input-row">
             <div className="input-group">
               <label for="">Name</label>
-              <input type="text" placeholder="Ichigo Kurosaki" name="Name" />
+              <input type="text" placeholder="Sneak Peek" name="Name" />
             </div>
             <div className="input-group">
               <label for="">Phone</label>
-              <input type="text" placeholder="699-699-699" name="Phone no" />
+              <input type="text" placeholder="123-123-123" name="Phone no" />
             </div>
           </div>
 
@@ -29,7 +29,7 @@ const ContactPage = () => {
               <label for="">Email</label>
               <input
                 type="email"
-                placeholder="tensazanpakto@gmail.com"
+                placeholder="sneakpeek@gmail.com"
                 name="Email"
               />
             </div>
@@ -41,7 +41,7 @@ const ContactPage = () => {
           <label for="">Message</label>
           <textarea
         
-            placeholder="Just write it.."
+            placeholder="Share your thoughts here and lace up your message with SneakPeek flair..."
             rows="5"
             name="Message"
           ></textarea>
@@ -49,7 +49,7 @@ const ContactPage = () => {
         </form>
       </div>
       <div className="contact-right">
-        <h3>Just reach me</h3>
+        <h3>Just reach me!!!</h3>
         <table>
           <tr>
             <td><MdEmail/></td>
