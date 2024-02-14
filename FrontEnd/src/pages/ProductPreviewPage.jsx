@@ -2,8 +2,8 @@ import React from 'react'
 import {htmlToText} from 'html-to-text'
 
 const ProductPreview = ({ name, picture, description, price, sizes,details }) => {
-  return (
-   <div className="product-preview">
+return (
+<div className="product-preview">
         <div className="product-preview-container">
             <div className="shoeImage">
             <img src={picture} alt="" className="logo"/>
@@ -17,7 +17,7 @@ const ProductPreview = ({ name, picture, description, price, sizes,details }) =>
                 </div>
                 <div className="description">
                     <p className="text">{htmlToText(description,{
-                         wordwrap: 130
+                        wordwrap: 130
                     })}</p>
                 </div>
                 <div className="size-container">
@@ -38,7 +38,7 @@ const ProductPreview = ({ name, picture, description, price, sizes,details }) =>
             </div>
         </div>
     </div>
-  );
+);
 };
 
 export default ProductPreview

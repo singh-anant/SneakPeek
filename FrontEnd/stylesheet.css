@@ -425,4 +425,99 @@ li {
 
 /* About Section CSS End Here */
 
+/* Contact Page CSS Start Here*/
+
+.contact-box {
+  display: flex;
+  /* border: 2px solid rgb(168, 20, 194); */
+}
+
+.contact-left {
+  flex-basis: 60%;
+  padding: 40px 60px;
+}
+
+.contact-right {
+  flex-basis: 60%;
+  padding: 40px 60px;
+  background: #5cbdb9;
+  color: white;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  flex-basis: 45%;
+}
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: 20px;
+  font-weight: 400;
+}
+textarea {
+  width: 100%;
+  border: 1px solid black;
+  outline: none;
+  padding: 13px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 400;
+}
+label {
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+button {
+  background: #5cbdb9;
+  width: 100px;
+  border: none;
+  color: white;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: 0.7s;
+}
+button:hover {
+  background: #5cbdb9;
+  font-weight: 600;
+  transform: translateY(-5px);
+}
+.contact-left h3 {
+  color: #5cbdb9;
+  font-weight: 800;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+.contact-right h3 {
+  color: white;
+  font-weight: 800;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+tr td:first-child {
+  padding-right: 20px;
+  font-size: 30px;
+}
+tr td {
+  padding-top: 20px;
+}
+
+tr td a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+/* Contact Page CSS Ends Here */
 
