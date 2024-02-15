@@ -3,25 +3,15 @@ import { useParams } from 'react-router-dom'
 import { SHOES_API } from '../../utils/Helper';
 import {htmlToText} from 'html-to-text'
 import ModalImage from '../components/ModalImage';
+import useGetSneakerInfo from '../Hooks/useGetSneakerInfo';
 
 
 
 const ProductPreviewpage = () => {
   const [openModel,setOpenModal]=useState(false);
-  const [sneaker,setSneaker]=useState();
   const {index}=useParams();
   
-  const getSneaker=async()=>{
-    const data=await fetch(SHOES_API);
-    const result=await data.json();
-    setSneaker(result?.sneakers[index]);
-  }
-
-
-
-  useEffect(()=>{ 
-    getSneaker()
-  },[])
+  const sneaker= useGetSneakerInfo(index);
 
   return (
     <div className="product-preview">

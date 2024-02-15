@@ -1,27 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
-import { SHOES_API } from '../../utils/Helper';
 import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import Search from '../components/Search';
 import { Link } from 'react-router-dom';
+import useGetAllSneakerInfo from '../Hooks/useGetAllSneakerInfo';
 
 
 
 const HomePage = () => {
-const [resultAPI,setResultAPI]=useState();
 const [search,setSearch]=useState('');
 
 
-  const getSneakersData=async()=>{
-    const data=await fetch(SHOES_API);
-    const result=await data.json();
-    setResultAPI(result?.sneakers);
-  }
-
-
-  useEffect(()=>{ 
-    getSneakersData()
-  },[])
+const resultAPI=useGetAllSneakerInfo();
 
 
   //Early Return

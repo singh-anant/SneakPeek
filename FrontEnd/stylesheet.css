@@ -75,7 +75,7 @@ align-content: center;
 
 .searchTerm {
   border-right: none;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 5px 0 0 5px;
   outline: none;
   border: 0;
