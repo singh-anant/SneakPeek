@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { SHOES_API } from '../../utils/Helper';
 import {htmlToText} from 'html-to-text'
 import ModalImage from '../components/ModalImage';
 import useGetSneakerInfo from '../Hooks/useGetSneakerInfo';
