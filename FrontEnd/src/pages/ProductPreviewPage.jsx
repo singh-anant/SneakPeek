@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { SHOES_API } from '../../utils/Helper';
 import {htmlToText} from 'html-to-text'
-import { FiShoppingCart } from "react-icons/fi";
+import ModalImage from '../components/ModalImage';
+
 
 
 const ProductPreviewpage = () => {
+  const [openModel,setOpenModal]=useState(false);
   const [sneaker,setSneaker]=useState();
   const {index}=useParams();
   
@@ -13,7 +15,6 @@ const ProductPreviewpage = () => {
     const data=await fetch(SHOES_API);
     const result=await data.json();
     setSneaker(result?.sneakers[index]);
-    console.log(sneaker);
   }
 
 
@@ -23,10 +24,12 @@ const ProductPreviewpage = () => {
   },[])
 
   return (
-     <div className="product-preview">
+    <div className="product-preview">
         <div className="product-preview-container">
             <div className="shoeImage">
-            <img src={sneaker?.main_picture_url} alt="" className="logo"/>
+            <img src={sneaker?.main_picture_url} alt="" className="logo"
+              onClick={()=>{setOpenModal(true)}}
+            />
             </div>
             <div className="product-preview-info">
                 <div className="shoeName">
@@ -37,17 +40,9 @@ const ProductPreviewpage = () => {
                 </div>
               <div className="description">
                     <p className="text">{htmlToText(sneaker?.story_html,{
-                         wordwrap: 130
+                        wordwrap: 130
                     })}</p>
                 </div>
-                {/* <div className="size-container">
-                    <h3 className="title">size</h3>
-                        <div className="sizes">
-                        {sneaker?.size_range?.map((size, index) => (
-                            <span key={index} className="size">{size}</span>
-))}
-                </div>
-                </div> */}
                 <div className="buy-price">
                     <div className="price">
                         <h1>${Math.floor(sneaker?.retail_price_cents/100)}</h1>
@@ -56,6 +51,7 @@ const ProductPreviewpage = () => {
                 </div>
             </div>
         </div>
+      {openModel && <ModalImage setOpenModal={setOpenModal} image={sneaker?.main_picture_url}/>}  
     </div>
   )
 }
