@@ -3,6 +3,7 @@ import ProductCard from '../components/ProductCard';
 import { SHOES_API } from '../../utils/Helper';
 import { ShimmerSimpleGallery } from "react-shimmer-effects";
 import Search from '../components/Search';
+import { Link } from 'react-router-dom';
 
 
 
@@ -15,7 +16,6 @@ const [search,setSearch]=useState('');
     const data=await fetch(SHOES_API);
     const result=await data.json();
     setResultAPI(result?.sneakers);
-    console.log(resultAPI);
   }
 
 
@@ -37,14 +37,20 @@ const [search,setSearch]=useState('');
             else if(sneaker?.name.toLowerCase().includes(search.toLowerCase())){
               return sneaker
             }
-        })?.map((sneaker)=>{
-        return  <ProductCard 
-                key={sneaker?.id}
+        })?.map((sneaker,index)=>{
+        return <Link 
+                      style={{textDecoration:'none',color:'black'}}
+                      to={'/product/'+index}
+                      key={sneaker?.id}
+        >
+                <ProductCard 
                 sneakerObj={sneaker}
                 productName={sneaker?.name}
                 image={sneaker?.original_picture_url}
                 brand={sneaker?.brand_name}
                 />
+                </Link>
+                
   })
   }
     

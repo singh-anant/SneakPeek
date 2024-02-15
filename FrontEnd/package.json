@@ -10,10 +10,6 @@
   },
   "author": "Anant",
   "license": "ISC",
-  "devDependencies": {
-    "parcel": "^2.11.0",
-    "process": "^0.11.10"
-  },
   "dependencies": {
     "html-to-text": "^9.0.5",
     "react": "^18.2.0",
@@ -21,5 +17,9 @@
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.0",
     "react-shimmer-effects": "^1.0.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
   }
 }

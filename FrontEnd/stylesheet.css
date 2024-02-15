@@ -150,16 +150,20 @@ align-content: center;
 .product-preview{
     display: flex;
     width:100%;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
+    height: 100vh;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 2em;
     overflow: hidden;
+    /* background: #000; */
 }
 
 .product-preview-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background: yellow; */
+    height: 90%;
 }
 
 .shoeImage{
@@ -172,7 +176,7 @@ position: relative;
 }
 .product-preview-info{
   width: 100%;
-  height: 100%;
+  height: auto;
   z-index: 1;
   padding: 3.5em 4em;
   background: #ebf6f5;
@@ -182,28 +186,33 @@ position: relative;
 .shoeName .big{
     color:#5cbdb9;
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 40px;
+    margin-bottom: 0.4em;
 
 }
 .shoeName .small{
-  font-weight: 500;
+  font-weight: 600;
+  /* margin-top: 1px; */
   text-transform: capitalize;
+      margin-bottom: 0.4em;
+  font-size: 20px;
+
 }
 
 .shoeName, .description,  .size-container{
-  border-bottom: 1px solid #dadada;
+  border-bottom: 4px solid #dadada;
 }
 
-.description{
-  padding: 2px 0;
+.description .text{
+  padding: 20px 0 20px 0;
+  font-size: 16px;
+  /* background: red; */
  
 }
 
 
-.description .text{
-/* padding: 1em; */
-}
 
+/* 
 .size-container{
   padding: 10px 0;
   margin-bottom: 10px;
@@ -230,12 +239,12 @@ position: relative;
 }
 
 .size:hover{
-  color: #fff;
+    color: #fff;
   background-color: #5cbdb9;
   border: 0;
   outline: none;
 
-}
+} */
 
 
 .buy-price{
@@ -264,17 +273,15 @@ position: relative;
 }
 
 .product-add-to-cart-button{
-  align-items: center;
   background-color: #5cbdb9;
-  border: 2px solid #000;
+  border:0;
   color: #fff;
   cursor: pointer;
-  fill: #000;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   height: 48px;
   line-height: 24px;
-  min-width: 140px;
+  min-width: 14em;
   outline: 0;
   padding: 0 17px;
   text-align: center;    
@@ -284,26 +291,7 @@ position: relative;
   background-color: #4fcbc7;
    
 }
-.product-preview-close-button{
-  align-items: center;
-  background-color: #E72F5D;
-  border: 2px solid #000;
-  color: #fff;
-  cursor: pointer;
-  fill: #000;
-  font-size: 18px;
-  font-weight: 600;
-  height: 48px;
-  line-height: 24px;
-  min-width: 140px;
-  outline: 0;
-  padding: 0 17px;
-  text-align: center;
-}
 
-.product-preview-close-button:hover{
-      background-color: #e81348;
-}
 
 
 /* ProductPreview CSS End Here  */
@@ -543,7 +531,7 @@ tr td a {
   text-decoration: none;
   color: #fff;
   background-color: #5cbdb9;
-  padding: 10px 15px;
+  padding: 1em 1.5em;
   border-radius: 5px;
 }
 
