@@ -2,15 +2,16 @@ import React from 'react'
 import ProductInCart from '../components/ProductInCart'
 import useCartStore from '../app/cartStore';
 import useAmountStore from '../app/amountStore';
+import EmptyCartPage from './EmptyCartPage';
 
 
 const CartPage = () => {
     const {amount}=useAmountStore();
-
-  const cart = useCartStore((state) => state.cart)
-  console.log(cart);
+    const cart = useCartStore((state) => state.cart)
+    
   return (
-    <div className="cartpage-container">
+   ( amount===0 )?(<EmptyCartPage/>):
+   ( <div className="cartpage-container">
   <div className="payment_details">
     
     <div className="details_card">
@@ -36,7 +37,7 @@ const CartPage = () => {
     <div className="summary_card">
           <h1>Order Summary</h1>
         {cart.map((sneaker,index)=>{
-         return <ProductInCart key={index} 
+        return <ProductInCart key={index} 
           name={sneaker?.name}
           details={sneaker?.details}
           image={sneaker?.grid_picture_url}
@@ -52,7 +53,7 @@ const CartPage = () => {
       </div>
     </div>
   </div>
-</div>
+</div>)
   )
 }
 

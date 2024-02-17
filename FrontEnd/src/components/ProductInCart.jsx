@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import useCartStore from '../app/cartStore';
 import useAmountStore from '../app/amountStore';
 
 const ProductInCart = ({name,details,price,image,id}) => {
       const {removeSneaker} =useCartStore();
-  const {subtractAmount}=useAmountStore();
+  const {subtractAmount,addAmount}=useAmountStore();
+  const [quantity,setQuantity]=useState(1);
+
+//basically if my quanity reaches 0 or less remove it from cart.
+  if(quantity<=0)
+  removeSneaker(id);
+  
+  
+  
 
 
-  return (
-    <div className="card_item">
+  return (<div className="card_item">
         <div className="product_img">
           <img src={image} alt="" />
         </div>
@@ -23,9 +30,15 @@ const ProductInCart = ({name,details,price,image,id}) => {
           </div>
           <div className="product_rate_info">
             <h1>$ {price}</h1>
-            <span className="pqt-minus">-</span>
-            <span className="pqt">1</span>
-            <span className="pqt-plus">+</span>
+            <span className="pqt-minus" onClick={()=>{
+                setQuantity(quantity-1)
+                subtractAmount(price)
+            }}>-</span>
+            <span className="pqt">{quantity}</span>
+            <span className="pqt-plus" onClick={()=>{
+                setQuantity(quantity+1)
+                addAmount(price)
+            }}>+</span>
           </div>
         </div>
       </div>

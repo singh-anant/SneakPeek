@@ -675,7 +675,7 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1p
 
 .summary_card {
   background-color: #ebf6f5;
-  width: 350px;
+  width: auto;
   height: auto;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -696,6 +696,7 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1p
   border: none;
   background: #ebf6f5;
   cursor: pointer;
+  font-size: 25px;
 }
 
 .card_item .product_img img {
@@ -775,9 +776,7 @@ Order price & total
   font-weight: 600;
 }
 
-/*
-Payment Information all input
-*/
+
 
 .cartpage-container input {
   outline: 0;
@@ -804,13 +803,54 @@ Payment Information all input
   justify-content: space-between;
   margin: 10px 0;
 }
-
-
-
-
-
-
 /* CartPage CSS Ends Here */
+
+/* EmptyCartPage CSS Start Here */
+/* .empty-cart-container{
+} */
+
+.image-container{
+  
+ display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.image-container image{
+background: #ebf6f5;
+  width: 50%;
+}
+
+
+.empty-cart-container .text{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 35px;
+ font-weight: 600; 
+}
+
+.empty-cart-container .backButton{
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty-cart-container .backButton button{
+  background-color: #5cbdb9;
+  border:0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  height: 2.5em;
+  min-width: 14em;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+}
+/* EmptyCartPage CSS Ends Here */
+
 
 
 
