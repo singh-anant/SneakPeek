@@ -19,7 +19,7 @@ const Header = () => {
             <li><Link style={{textDecoration:'none',color:'black'}} to='/about'>About</Link></li>
             <li><Link style={{textDecoration:'none',color:'black'}} to='/contact'>Contact</Link></li>
             <li><Link style={{textDecoration:'none',color:'black'}} to='/contact'>Login</Link></li>
-            <li><Link style={{textDecoration:'none',color:'black'}} to=''><PiSneakerMoveThin size={35}/>
+            <li><Link style={{textDecoration:'none',color:'black'}} to='/cart'><PiSneakerMoveThin size={35}/>
             <span style={{backgroundColor: "#5cbdb9", color: "white", padding:'5px 10px', borderRadius:'20px', marginLeft:'2px' ,position: "absolute"}}>{cart.length}</span>
             </Link>
             </li>

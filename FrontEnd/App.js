@@ -7,6 +7,7 @@ import ErrorPage from "./src/pages/ErrorPage";
 import AboutPage from "./src/pages/AboutPage";
 import ContactPage from "./src/pages/ContactPage";
 import ProductPreviewPage from "./src/pages/ProductPreviewpage";
+import CartPage from "./src/pages/CartPage";
 
 const App = () => {
   return (
@@ -44,6 +45,11 @@ const appRouter=createBrowserRouter([
   {
     path:'/product/:index',
     element:<ProductPreviewPage/>,
+    errorElement:<ErrorPage/>
+  },
+  {
+    path:'/cart',
+    element:<CartPage/>,
     errorElement:<ErrorPage/>
   },
     ]
