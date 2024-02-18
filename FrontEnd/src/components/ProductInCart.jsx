@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useCartStore from '../app/cartStore';
 import useAmountStore from '../app/amountStore';
 
-const ProductInCart = ({name,details,price,image,id}) => {
+const ProductInCart = ({name,details,price,image,id,quantity,setQuantity}) => {
       const {removeSneaker} =useCartStore();
   const {subtractAmount,addAmount}=useAmountStore();
-  const [quantity,setQuantity]=useState(1);
 
 //basically if my quanity reaches 0 or less remove it from cart.
   if(quantity<=0)

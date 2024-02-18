@@ -13,14 +13,16 @@
 /* Basic WebApp CSS Ends Here */
 
 
-
-
 /* Header CSS Start Here */
 .header{
    /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background:#fff;
+  z-index: 2;
 
 }
 .nav-items-container{
@@ -33,7 +35,6 @@
 
 .logo-container img{
     width: 8em;
-    /* background-color: aqua; */
 }
 
 .nav-items-container ul{
@@ -49,11 +50,53 @@
     font-size: larger;
 }
 
+/* Writing for responsive design */
+
+.hamburger-menu ,.close-menu{
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    display: none;
+    }
+
+
+@media (max-width:959px) {
+
+  .logo-container img{
+    width: 6em;
+  }
+  .header{
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+  }
+  .nav-items-container ul{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .nav-items-container ul li{
+    width: 100%;
+    text-align: center;
+  }
+  .nav-items-container ul.open {
+      display: flex;
+  }
+   
+  .show{
+    display: flex;
+  }
+}
+
 /* Header CSS Ends Here */
 
 
 /* HomePage CSS Start Here */
-    
     .homepage{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(27rem,0fr));
@@ -62,7 +105,6 @@
 /* HomePage CSS End Here */
 
 /* Search CSS Start Here */
-
 .search{
 align-content: center;
 }
@@ -76,7 +118,6 @@ align-content: center;
 .searchTerm {
   border-right: none;
   padding: 0.5em;
-  border-radius: 5px 0 0 5px;
   outline: none;
   border: 0;
   width: 55%;
@@ -85,30 +126,20 @@ align-content: center;
 }
 
 
-.searchButton {
-  background: #5cbdb9;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
-  padding: 0.4em;
-  outline: none;
-  border: 0;
+@media (max-width:959px){
+ 
+.searchTerm{
+  width: 9em;
+  font-size: 9px;
+  width: 70%;
 }
 
-.searchButton:hover{
-  background:#63e2de;
 }
-
-/*Resize the wrap to see the search bar change!*/
 
 /* Search CSS End Here */
 
 
 /* ProductCard CSS Start Here */
-
-
 .product-card .product-card-container .product {
     text-align: center;
     padding: 2rem 1rem;
@@ -143,6 +174,20 @@ align-content: center;
     font-size: 1rem;
 }
 
+@media (max-width:614px){
+   .product-card .product-card-container .product img{
+    height: 10rem;
+    width:8rem;
+   }
+   .product-card .product-card-container .product h3{
+        font-size: 1rem;
+   }
+
+   .product{
+    width: 20em;
+   }
+}
+
 /* ProductCard CSS End Here */
 
 
@@ -151,24 +196,19 @@ align-content: center;
     display: flex;
     width:100%;
     height: 100vh;
-    /* justify-content: center; */
-    /* align-items: center; */
     padding: 2em;
     overflow: hidden;
-    /* background: #000; */
 }
 
 .product-preview-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: yellow; */
     height: 90%;
 }
 
 .shoeImage{
 position: relative;
-/* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;} */
 }
 .shoeImage img{
     width: 90%;
@@ -180,7 +220,6 @@ position: relative;
   z-index: 1;
   padding: 3.5em 4em;
   background: #ebf6f5;
-/* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
 }
 
 .shoeName .big{
@@ -192,9 +231,6 @@ position: relative;
 }
 .shoeName .small{
   font-weight: 600;
-  /* margin-top: 1px; */
-  text-transform: capitalize;
-      margin-bottom: 0.4em;
   font-size: 20px;
 
 }
@@ -206,51 +242,13 @@ position: relative;
 .description .text{
   padding: 20px 0 20px 0;
   font-size: 16px;
-  /* background: red; */
- 
 }
 
-
-
-/* 
-.size-container{
-  padding: 10px 0;
-  margin-bottom: 10px;
-}
-
-.sizes{
-  padding: 6px 0;
-  display: flex;
-  align-items: center;
-}
-
-.size{
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
-  border: 2px solid black;
-  background-color: #eee;
-  margin: 0 10px;
-  text-align: center;
-  line-height: 2em;
-  font-size: 1.2rem;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.size:hover{
-    color: #fff;
-  background-color: #5cbdb9;
-  border: 0;
-  outline: none;
-
-} */
 
 
 .buy-price{
   padding-top: 1.5em;
   display: flex;
- 
 }
 
 .price{
@@ -288,12 +286,29 @@ position: relative;
 }
 
 .product-add-to-cart-button:hover{
-  background-color: #4fcbc7;
-   
+  background-color: #4fcbc7;  
 }
 
 
+@media (max-width:614px) {
+  .product-preview-container{
+    flex-direction: column;
+    height: auto;
+    margin-top: 3em;
+  }
 
+  .shoeImage{
+    position: relative;
+}
+.shoeImage img{
+   
+
+}
+.product-preview-info{
+  width: 20em;
+  height: auto;
+}
+}
 /* ProductPreview CSS End Here  */
 
 /* About Section CSS Start Here */
@@ -417,7 +432,6 @@ li {
 
 .contact-box {
   display: flex;
-  /* border: 2px solid rgb(168, 20, 194); */
 }
 
 .contact-box .contact-left {
@@ -544,49 +558,6 @@ li {
 
 
 /* ModalImage CSS Start Here */
-/* .modal-background {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  opacity: 1;
-}
-
-.modal-container {
-  width: 50em;
-  height: 50em;
-  border-radius: 12px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-}
-
-.cancel-button {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.cancel-button button {
-  background-color: transparent;
-  border: none;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-
-.modal-container .modal-body {
-  flex: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.7rem;
-  text-align: center;
-} */
 
 .modal-background {
     position: fixed;
@@ -628,7 +599,7 @@ li {
 
 .modal-body img {
     max-width: 100%;
-    max-height: 80vh; /* Adjust as needed */
+    max-height: 80vh; 
     border-radius: 8px;
 }
 
@@ -653,7 +624,7 @@ li {
 .cartpage-container .details_card {
   width: 700px;
   height: auto;
-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  
   padding: 1em;
   background-color: #ebf6f5;
 }
@@ -670,7 +641,6 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1p
   outline: 0;
   padding: 0 17px;
   text-align: center;
- 
 }
 
 .summary_card {
@@ -724,9 +694,7 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1p
   justify-content: space-between;
 }
 
-/*
-cart item + & -
-*/
+
 .pqt {
   font-size: 20px;
   line-height: 30px;
@@ -806,8 +774,7 @@ Order price & total
 /* CartPage CSS Ends Here */
 
 /* EmptyCartPage CSS Start Here */
-/* .empty-cart-container{
-} */
+
 
 .image-container{
   

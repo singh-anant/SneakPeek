@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProductInCart from '../components/ProductInCart'
 import useCartStore from '../app/cartStore';
 import useAmountStore from '../app/amountStore';
@@ -8,6 +8,8 @@ import EmptyCartPage from './EmptyCartPage';
 const CartPage = () => {
     const {amount}=useAmountStore();
     const cart = useCartStore((state) => state.cart)
+    const [quantity,setQuantity]=useState(1);
+
     
   return (
    ( amount===0 )?(<EmptyCartPage/>):
@@ -37,15 +39,22 @@ const CartPage = () => {
     <div className="summary_card">
           <h1>Order Summary</h1>
         {cart.map((sneaker,index)=>{
-        return <ProductInCart key={index} 
+          // const existingItem = cart.find(item => item.id === sneaker.id);
+          // if(existingItem){
+          //       setQuantity(quantity+1);
+          //       return null;
+          // }
+      return <ProductInCart key={index} 
           name={sneaker?.name}
           details={sneaker?.details}
           image={sneaker?.grid_picture_url}
           id={sneaker?.id}
-
           price={Math.floor(sneaker?.retail_price_cents/100)}
-          />
-        })}
+          setQuantity={setQuantity}
+          quantity={quantity}
+          
+          />}
+        )}
       <hr/>
       <div className="order_total">
         <p>Total Amount</p>
