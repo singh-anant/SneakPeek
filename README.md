@@ -54,6 +54,8 @@ To run SneakPeek locally on your machine, follow these steps:
 
 [![Screenshot-2024-02-20-at-9-44-30-AM.png](https://i.postimg.cc/28ND4v6T/Screenshot-2024-02-20-at-9-44-30-AM.png)](https://postimg.cc/8s49G7Lr)
 
+[![Screenshot-2024-02-21-at-8-24-04-AM.png](https://i.postimg.cc/fyBBxKZR/Screenshot-2024-02-21-at-8-24-04-AM.png)](https://postimg.cc/2LLQYnVs)
+
 [![Screenshot-2024-02-20-at-5-24-23-PM.png](https://i.postimg.cc/DyN1j29C/Screenshot-2024-02-20-at-5-24-23-PM.png)](https://postimg.cc/6yd7TN5R)
 
 
