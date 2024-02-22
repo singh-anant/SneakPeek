@@ -11,8 +11,8 @@
   "author": "Anant",
   "license": "ISC",
   "dependencies": {
-    "@google-pay/button-react": "^3.0.10",
     "html-to-text": "^9.0.5",
+    "pdfmake": "^0.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
